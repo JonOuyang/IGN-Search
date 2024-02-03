@@ -25,6 +25,8 @@ driver = webdriver.Chrome()
 driver.get(f'https://minecraftuuid.com/?search=Dimensionz_')
 time.sleep(2)
 
+#WARNING: Page fails after 100 rapid API calls (server side)
+
 for ign in word_list:
     driver.get(f'https://minecraftuuid.com/?search={ign}')
     timeout = 1
