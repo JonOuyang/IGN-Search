@@ -1,4 +1,3 @@
-import random
 import nltk
 from nltk.corpus import words
 from selenium import webdriver
@@ -21,9 +20,8 @@ word_list = [word for word in word_list if 3 <= len(word) <= 16]
 available_list = []
 
 driver = webdriver.Chrome()
-
 driver.get(f'https://minecraftuuid.com/?search=Dimensionz_')
-time.sleep(2)
+#time.sleep(2)
 
 #WARNING: Page fails after 100 rapid API calls (server side)
 
