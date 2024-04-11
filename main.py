@@ -33,3 +33,13 @@ for ign in word_list:
         WebDriverWait(driver, timeout).until(element_present)
     except:
         available_list.append(ign)
+
+
+def minecraftuuid(ign):
+    driver.get(f'https://minecraftuuid.com/?search={ign}')
+    timeout = 1
+    try:
+        element_present = EC.presence_of_element_located((By.XPATH, '//*[@id="Player-Info-Row"]/div'))
+        WebDriverWait(driver, timeout).until(element_present)
+    except:
+        available_list.append(ign)
