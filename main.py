@@ -15,7 +15,7 @@ from selenium.common.exceptions import TimeoutException
 nltk.download('words')
 
 word_list = words.words()
-# cuts list down from 236736 -> 233080
+# cuts list down from 236736 -> 233080 (to fit ign character length restrictions)
 word_list = [word for word in word_list if 3 <= len(word) <= 16]
 available_list = []
 
